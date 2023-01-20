@@ -84,7 +84,8 @@ super + w
 	firefox
 
 super + space
-	rofi -disable-history -drun-match-fields name -show drun
+	rofi -disable-history -drun-match-fields name -show drun -icon-theme "Papirus" -show-icons
+
 ctrl + space
     rofi -show power-menu -modi power-menu:rofi-power-menu
 	
