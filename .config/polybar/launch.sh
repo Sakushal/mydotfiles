@@ -8,6 +8,12 @@ while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 # Launch polybar
 polybar main -c $(dirname $0)/config.ini &
+polybar main1 -c $(dirname $0)/config.ini &
+polybar main2 -c $(dirname $0)/config.ini &
+polybar main3 -c $(dirname $0)/config.ini &
+polybar main4 -c $(dirname $0)/config.ini &
+polybar main5 -c $(dirname $0)/config.ini &
+polybar main6 -c $(dirname $0)/config.ini &
 
 if [[ $(xrandr -q | grep 'HDMI1 connected') ]]; then
 	polybar external -c $(dirname $0)/config.ini &
