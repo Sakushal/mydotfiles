@@ -110,10 +110,10 @@ super + shift + s
 
 # printscreen
 @Print
-	scrot -s --line mode=edge ~/Pictures/Screenshots/%Y-%m-%d_%H%M%S-$wx$h_scrot.png
+	
 
-shift + @Print
-	screenshot select
+shift + p
+	flameshot screen
 
 control + @Print
 	screenshot window
