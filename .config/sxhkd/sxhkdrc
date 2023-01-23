@@ -88,6 +88,9 @@ super + space
 
 ctrl + space
     rofi -show power-menu -modi power-menu:rofi-power-menu
+
+ctrl + n
+    wifimenu
 	
 super + c
 	code
@@ -100,8 +103,8 @@ super + .
 super + shift + s
 	scrot --select --line mode=edge '/tmp/%F_%T_$wx$h.png' -e 'xclip -selection clipboard -target image/png -i $f && rm $f'
 
-@Print
-scrot '$HOME/Pictures/%Y-%m-%d-%T-screenshot.png'
+#@Print
+#scrot '$HOME/Pictures/%Y-%m-%d-%T-screenshot.png'
 
 #super + l
 
@@ -116,14 +119,13 @@ control + @Print
 	screenshot window
 
 XF86MonBrightness{Up,Down}  
-  brightnessctl s 10{+,-}  
+    brightnessctl s 10%{+,-}  
  
 XF86Audio{Raise,Lower}Volume  
-  pulsemixer --change-volume {+,-}10  
+    pactl set-sink-volume 0 {+,-}10% 
  
 XF86AudioMute  
-  pulsemixer  --toggle-mute
-
+    pulsemixer  --toggle-mute
 
 
 
